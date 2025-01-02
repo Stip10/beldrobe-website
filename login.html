@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-header h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .form-group input:focus {
+            border-color: #1E1E1E;
+            outline: none;
+        }
+
+        .login-button, .signup-button {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #1E1E1E;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover, .signup-button:hover {
+            background-color: #444;
+        }
+
+        .link-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link-section a {
+            color: #1E1E1E;
+            text-decoration: none;
+        }
+
+        .link-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Login</h1>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <div class="link-section">
+            <p>Don't have an account? <a href="#" onclick="window.location.href='home.html';">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Form login submission logic (directing to Home page)
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent actual form submission
+            window.location.href = "home.html";  // Redirect to Home page after login
+        });
+    </script>
+</body>
+</html>

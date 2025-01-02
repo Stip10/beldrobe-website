@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Ensure all brand logos are uniform in size and style */
+        .brand-item img {
+            width: 150px; /* Set consistent width */
+            height: 150px; /* Set consistent height */
+            object-fit: contain; /* Maintain logo proportions */
+            filter: grayscale(100%); /* Convert logos to grayscale */
+            transition: transform 0.3s ease;
+        }
+
+        .brand-item img:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        .brand-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" style="text-decoration: none; color: white;">
+            <div class="logo">Beldrobe</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="newarrivals.html">New Arrivals</a></li>
+                <li><a href="#">Category</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                    </ul>
+                </li>
+                <li><a href="brand.html">Brand</a></li>
+                <li><a href="kontak.html">Contact</a></li>
+                <li class="cart">
+                    <a href="#" id="cart-link">
+                        <span class="cart-icon">🛒</span> 
+                        <span id="cart-count">0</span>
+                    </a>
+                    <ul class="cart-dropdown">
+                        <li id="cart-items">Keranjang kosong</li>
+                        <li><a href="#" id="checkout-button">Checkout</a></li>
+                    </ul>
+                    <button id="clear-cart-button" class="clear-cart-button">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button id="logout-button" class="logout-button">
+                        <i class="fas fa-sign-out-alt"></i>  <!-- Icon logout -->
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="brand-section">
+        <div class="brand-container">
+            <div class="brand-item">
+                <img src="img/CONVERSE_LOGO.png" alt="Converse">
+            </div>
+            <a href="adidas.html">
+            <div class="brand-item">
+                <img src="img/ADIDAS_LOGO.png" alt="Adidas">
+            </div></a>
+            <div class="brand-item">
+                <img src="img/NB_LOGO.png" alt="New Balance">
+            </div>
+            <div class="brand-item">
+                <img src="img/PUMA_LOGO.png" alt="Puma">
+            </div>
+            <div class="brand-item">
+                <img src="img/NIKE_LOGO.png" alt="Nike">
+            </div>
+            <div class="brand-item">
+                <img src="img/VANS_LOGO.png" alt="Vans">
+            </div>
+            <div class="brand-item">
+                <img src="img/UNDERARMOUR_LOGO.png" alt="Under Armour">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Beldrobe Official Store</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

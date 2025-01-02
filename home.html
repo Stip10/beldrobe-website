@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beldrobe Official Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="home.html" style="text-decoration: none; color: white;">
+            <div class="logo">Beldrobe</div>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="newarrivals.html">New Arrivals</a></li>
+                <li><a href="#">Category</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                    </ul>
+                </li>
+                <li><a href="brand.html">Brand</a></li>
+                <li><a href="kontak.html">Contact</a></li>
+                <li class="cart">
+                    <a href="#" id="cart-link">
+                        <span class="cart-icon">🛒</span> 
+                        <span id="cart-count">0</span>
+                    </a>
+                    <ul class="cart-dropdown">
+                        <li id="cart-items">Keranjang kosong</li>
+                        <li><a href="#" id="checkout-button">Checkout</a></li>
+                    </ul>
+                    <button id="clear-cart-button" class="clear-cart-button">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button id="logout-button" class="logout-button">
+                        <i class="fas fa-sign-out-alt"></i>  <!-- Icon logout -->
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="advertisement-banner">
+        <img src="https://1565619539.rsc.cdn77.org/temp/1718358019_23a07bcda501d75612f6186d0eb9d486.jpg" alt="Diskon 50% untuk Semua Produk!">
+    </div>
+    
+    <div class="hero">
+        <h1>Temukan Sepatu Terbaik untuk Anda</h1>
+        <p>Penawaran terbaik untuk sepatu pria dan wanita di sini!</p>
+        <a href="brand.html">
+            <button class="shop-now">Belanja Sekarang</button>
+        </a>
+    </div>
+
+    <section class="product-section">
+        <h2>Best Seller</h2>
+        <div class="product-container">
+            <div class="product-item">
+                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0c8566eb-3260-4890-8944-1c65eb22de46/AIR+FORCE+1+%28GS%29.png" alt="Nike Air Force 1">
+                <h3>Nike Air Force 1'07</h3>
+                <p>Harga: Rp 1.729.000</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/eaf524f7-a9f7-4f70-a438-1b0480eb2540/NIKE+COURT+VISION+LO.png" alt="Nike Court Vision Low">
+                <h3>Nike Court Vision Low</h3>
+                <p>Harga: Rp 1.069.000</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0f76f73e-2578-4d62-abab-c5563ea4f78c/NIKE+DUNK+LOW+RETRO.png" alt="Nike Dunk Low Retro">
+                <h3>Nike Dunk Low Retro</h3>
+                <p>Harga: Rp 1.549.000</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Beldrobe Official Store</p>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+        // Logout button action
+        document.getElementById('logout-button').addEventListener('click', function() {
+            window.location.href = 'login.html';  // Redirect to login page
+        });
+    </script>
+</body>
+</html>

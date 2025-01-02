@@ -1,0 +1,387 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1E1E1E;
+    color: white;
+}
+
+header .logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Advertisement Banner */
+.advertisement-banner {
+    text-align: center;
+    background-color: #e8ebea;
+    padding: 10px 0;
+}
+
+.advertisement-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Advertisement Banner Brand */
+.advertisement-banner-brand {
+    background-color: #fffbf2;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.advertisement-banner-brand img {
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Navbar Styling */
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Navbar Links */
+header nav ul li a:hover {
+    color: #f8f8f8;
+}
+
+header nav ul li a:visited {
+    color: white;
+}
+
+/* Dropdown Menu Styling */
+header nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 200px;
+    z-index: 10;
+}
+
+header nav ul li .dropdown-menu li {
+    margin: 0;
+}
+
+header nav ul li .dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li .dropdown-menu a:hover {
+    background-color: #444;
+}
+
+/* Menampilkan Dropdown saat Hover */
+header nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Cart Styling */
+.cart {
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cart a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    margin-right: 5px;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Checkout Button Styling */
+#checkout-button {
+    text-align: center;
+    display: block;
+    background-color: #1E1E1E; /* Dark background for the button */
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px; /* Reduced padding for a more refined look */
+    font-size: 14px; /* Smaller font size for elegance */
+    text-transform: uppercase;
+    border-radius: 20px; /* Slightly more rounded corners for a soft look */
+    margin-top: 5px; /* Less space above the button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect with scaling */
+    border: none; /* Remove the border to keep it clean */
+}
+
+#checkout-button:hover {
+    background-color: #444; /* Lighter background on hover */
+    transform: scale(1.05); /* Slightly increase the size on hover for a subtle effect */
+}
+
+/* Trash (Clear Cart) Button Styling */
+.clear-cart-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #e74c3c;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.clear-cart-button i {
+    font-size: 18px;
+}
+
+.clear-cart-button:hover {
+    color: #c0392b;
+}
+
+/* Cart Dropdown */
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    z-index: 100;
+    text-align: left;
+}
+
+.cart-dropdown li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.cart:hover .cart-dropdown {
+    display: block;
+}
+
+.logout-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;  /* Membuat kontrol atas z-index */
+    z-index: 2;  /* Menempatkan tombol logout di atas dropdown */
+}
+
+.logout-button i {
+    font-size: 18px;
+}
+
+.logout-button:hover {
+    color: #f44336;  /* Warna merah saat hover */
+}
+
+/* Mengatur dropdown checkout agar berada di bawah tombol logout */
+.cart-dropdown {
+    z-index: 1;
+    position: absolute;  /* Pastikan dropdown checkout posisinya benar */
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: #e8ebea;
+    color: black;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .shop-now {
+    background-color: #000;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero .shop-now:hover {
+    background-color: #444;
+}
+
+/* Brand Section */
+.brand-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.brand-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.brand-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.brand-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.brand-item img {
+    width: 150px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.brand-item:hover img {
+    opacity: 0.8;
+}
+
+.brand-item::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: black;
+    margin: 5px auto 0 auto;
+    transition: width 0.3s ease;
+}
+
+.brand-item:hover::after {
+    width: 100%;
+}
+
+/* Product Section */
+.product-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.product-item .add-to-cart {
+    background-color: #1E1E1E;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-item .add-to-cart:hover {
+    background-color: #444;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1E1E1E;
+    color: white;
+}

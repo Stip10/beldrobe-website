@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Advertisement Banner */
+        .advertisement-banner {
+            background-color: #fffbf2; /* Sesuaikan dengan latar belakang */
+            text-align: center;
+            padding: 0; /* Menghapus padding agar gambar menyesuaikan penuh */
+            width: 100%; /* Gambar mengisi lebar penuh kontainer */
+            height: 80vh; /* Menggunakan 100% tinggi layar (viewport) */
+            overflow: hidden; /* Menghindari bagian gambar yang keluar dari kontainer */
+            background-color: #ffffff;
+        }
+
+        .advertisement-banner img {
+            width: 100%; /* Gambar mengisi lebar penuh */
+            height: 100%; /* Gambar mengisi seluruh tinggi kontainer */
+            object-fit: cover; /* Menutupi area kontainer */
+            object-position: center bottom; /* Fokuskan gambar pada bagian bawah */
+            border: 3px solid #ddd; /* Menambahkan border untuk estetika */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+        }
+        
+
+        /* Product section */
+        .product-section {
+            padding: 40px 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .product-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .product-card .price {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .product-card .add-to-cart {
+            background-color: #1E1E1E;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .product-card .add-to-cart:hover {
+            background-color: #444;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .product-container {
+                grid-template-columns: repeat(4, 1fr); /* 4 items per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 992px) {
+            .product-container {
+                grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-container {
+                grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" style="text-decoration: none; color: white;">
+            <div class="logo">Beldrobe</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="newarrivals.html">New Arrivals</a></li>
+                <li><a href="#">Category</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                    </ul>
+                </li>
+                <li><a href="brand.html">Brand</a></li>
+                <li><a href="kontak.html">Contact</a></li>
+                <li class="cart">
+                    <a href="#" id="cart-link">
+                        <span class="cart-icon">🛒</span> 
+                        <span id="cart-count">0</span>
+                    </a>
+                    <ul class="cart-dropdown">
+                        <li id="cart-items">Keranjang kosong</li>
+                        <li><a href="#" id="checkout-button">Checkout</a></li>
+                    </ul>
+                    <button id="clear-cart-button" class="clear-cart-button">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button id="logout-button" class="logout-button">
+                        <i class="fas fa-sign-out-alt"></i>  <!-- Icon logout -->
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="advertisement-banner">
+        <img src="img/KIDS.jpg" alt="Diskon 50% untuk Semua Produk!">
+    </div>
+
+    <section class="product-section">
+        <h2>Kid's Products</h2>
+        <div class="product-container">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="img/SKECHERS_THERMO.jpg" alt="Product 1">
+                <h3>Skechers Thermo-Flash</h3>
+                <p>Men</p>
+                <p>Yellow</p>
+                <p class="price">Rp 559.000</p>
+                <p>⭐️⭐️⭐️⭐️⭐️ (5)</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="img/VANS_OLDSKULL.jpg" alt="Product 2">
+                <h3>VANS JN Old Skool V</h3>
+                <p>Men</p>
+                <p>Black/True White</p>
+                <p class="price">Rp 899.000</p>
+                <p>⭐️⭐️⭐️⭐️⭐️ (14)</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="img/ADIDAS_MARVEL.jpg" alt="Product 3">
+                <h3>Adidas Spider-Man</h3>
+                <p>Men</p>
+                <p>Footwear White/core Black</p>
+                <p class="price">Rp 850.000</p>
+                <p>⭐️⭐️⭐️⭐️⭐️ (41)</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="img/NIKE_DUNK_LOW.jpg" alt="Product 4">
+                <h3>Nike Dunk Low</h3>
+                <p>Unisex</p>
+                <p>White/Glacier Blue</p>
+                <p class="price">Rp 999.000</p>
+                <p>⭐️⭐️⭐️⭐️⭐️ (16)</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="img/NIKE_COURT_LEGACY.jpg" alt="Product 5">
+                <h3>Nike Court Legacy</h3>
+                <p>Unisex</p>
+                <p>White/Hemp/Black</p>
+                <p class="price">Rp 469.000</p>
+                <p>⭐️⭐️⭐️⭐️⭐️ (8)</p>
+                <button class="add-to-cart">Tambahkan ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Beldrobe Official Store</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
