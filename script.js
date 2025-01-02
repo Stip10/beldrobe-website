@@ -25,7 +25,7 @@ function saveCart() {
 
 // Logout button action
 document.getElementById('logout-button').addEventListener('click', function() {
-    window.location.href = 'login.html';  // Redirect to login page
+    window.location.href = 'index.html';  // Redirect to login page
 });
 
 // Function to update cart count and display items
